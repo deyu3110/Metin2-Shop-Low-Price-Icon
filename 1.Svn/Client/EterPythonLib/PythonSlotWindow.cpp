@@ -64,7 +64,7 @@ void CSlotWindow::SetFreeIcon(DWORD dwIndex)
 				else
 					rSlot.FreeIconStage += 0.02f;
 
-				if (rSlot.FreeIconState && rSlot.FreeIconStage <= 0.0f || !rSlot.FreeIconState && rSlot.FreeIconStage >= 1.0f)
+				if ((rSlot.FreeIconState && rSlot.FreeIconStage <= 0.0f) || (!rSlot.FreeIconState && rSlot.FreeIconStage >= 1.0f))
 					rSlot.FreeIconState = !rSlot.FreeIconState;
 
 				rSlot.pInstanceFreeIcon->SetDiffuseColor(1.0, 1.0, 1.0, rSlot.FreeIconStage);
